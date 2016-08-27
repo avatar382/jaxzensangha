@@ -14,3 +14,10 @@
 #   password: apassword
 #   # api_key: <your api key here>
 #   # ssl: true
+
+prod:
+  host: temple-rich.herokuapp.com:443
+  handle: jaxzensangha
+  email: avatar382@gmail.com
+  api_key: b9c263d816c7f2d4dc7bd24b8a8fc5c3ece768bc
+  ssl: true
