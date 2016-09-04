@@ -5,21 +5,19 @@ handle: home
 ---
 {% extends 'layouts/simple' %}
 
-{% block content/main %}
-.row
-  .col-lg-4
-    {% editable_text first_column %}
-    %h2 Heading #1
-    %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-    {% endeditable_text %}
-  .col-lg-4
-    {% editable_text second_column %}
-    %h2 Heading #2
-    %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-    {% endeditable_text %}
-  .col-lg-4
-    {% editable_text third_column %}
-    %h2 Heading #3
-    %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
-    {% endeditable_text %}
+
+{% block content/main, short_name: true %}
+{% capture photo %}{% editable_file "photo" %}/tmp/tmp.jpg{% endeditable_file %}{% endcapture %}
+.container
+  .row
+    .col-lg-12.col-md-12
+      {% editable_text body %}
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!
+      {% endeditable_text %}
+
+      %img(src="{{photo | resize: '200x' }}")
 {% endblock %}
+

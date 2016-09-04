@@ -5,16 +5,7 @@ is_layout: true
 {% extends 'layouts/default' %}
 
 {% block content %}
+{% block main %}
 
-.container
-  {% block main, short_name: true %}
-  .row
-    .col-lg-12.col-md-12
-      {% editable_text body %}
-      %p
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?
-      %p
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!
-      {% endeditable_text %}
-  {% endblock %}
+{% endblock %}
 {% endblock %}
